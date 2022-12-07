@@ -8,6 +8,8 @@ public class LivingEntity : MonoBehaviour, IDamageable
     protected float health;
     protected bool dead;
 
+    public event System.Action OnDeath; //When dying method is called event is called for subscribed spawner.cs to detect (prevents linking relation)
+
     protected virtual void Start()
     {
         health = startingHealth;
@@ -26,6 +28,10 @@ public class LivingEntity : MonoBehaviour, IDamageable
     protected void Die()
     {
         dead = true;
+        if(OnDeath != null)
+        {
+            OnDeath();
+        }
         GameObject.Destroy(gameObject);
     }
 }
