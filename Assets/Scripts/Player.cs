@@ -35,7 +35,7 @@ public class Player : LivingEntity
         // Move Input
         Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         Vector3 moveVelocity = moveInput.normalized * moveSpeed;
-        controller.Move(moveVelocity);
+        controller.Move(moveVelocity);//Move function in PlayerController.cs
 
         //Look Input
         Ray ray = viewCam.ScreenPointToRay(Input.mousePosition);
