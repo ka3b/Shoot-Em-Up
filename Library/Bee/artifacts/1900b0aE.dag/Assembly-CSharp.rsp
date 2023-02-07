@@ -364,6 +364,7 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Projectile.cs"
 "Assets/Scripts/Spawner.cs"
+"Assets/Scripts/Utility.cs"
 -langversion:9.0
 
 /deterministic
